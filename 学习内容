@@ -1,0 +1,64 @@
+一，
+
+<!-- html为了实现加粗 加颜色 放大 斜体 这么一个小的需求 嵌套了太多的标签
+    所以很多html的样式标签不怎么使用了，从而引入css -->
+    <p>
+        <!-- b标签（bold） 可以给文字加粗的标签 -->
+        <b>
+            <!-- font 可以改变字体颜色 和 字体尺寸-->
+            <font color="red" size="56">
+                <i>这是一个段落</i>
+            </font> 
+        </b>
+    </p> -->
+
+    <!-- 所以只需要html完成网页内容的问题，css来解决内容与表现分离的问题 -->
+    <!-- 通过css完成上面的功能 内容写在title下面 -->
+    <!-- 将上述删掉测试 -->
+
+二，
+
+css代码编写位置：
+1，内联样式：
+例如：
+<p style="color:red">这是一个段落</p>
+2，内部样式：
+例如：
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css语法基础</title>
+    <style>
+        p{
+            /* px:pixel像素 */
+            font-size: 48px;
+        }
+    </style>
+</head>
+<body>
+    <p style="color:red">这是一个段落</p>
+</body>
+</html>
+3，外部样式：
+新建一个css文件，来定义样式
+利用这个与html文件建立联系
+<link rel="stylesheet" href="style.css">
+优点：可以被多个html文件中使用
+
+当三个位置更改样式时，如果内部有重复，就会有覆盖的问题，满足就近原则
+若没有重复的，所有更改共同执行
+覆盖方式为：
+最后显示在网页上的，是在代码排在最后面的显示在网页上，因为代码从上
+往下执行，所以前面执行的被覆盖，网页上看不到
+也就是所谓的优先级问题，一般情况下的优先级为：
+*内联样式
+*内部样式和外部样式谁的代码在下面就最后执行谁
+
+三，
+
+
+
+
+
