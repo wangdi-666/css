@@ -5,15 +5,72 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>css语法基础</title>
     <style>
+        /* 既然是标签选择器 会选中所有的p标签 */
         /* p为这里的选择器，选择器内为声明 ，声明包含属性 和 它的值*/
         p{
            /* 属性 和 值 */
            /* #ff0000 替代 red 其中两个数为一组 分别为：ff 00 00 为rgb的 */
+            color:#0000ff;
+            /* 利用下面的分组选择器也可以实现 p,h1{} 而且避免代码繁琐 */
+            /* font-size: 46px; */
+        }
+        h1{
             color:#ff0000;
+            /* font-size: 46px; */
+        }
+        /* 分组选择器 */
+        p,h1{
+            font-size: 46px;
+        }
+        /* id 选择器 #代表id */
+         #p1{
+            color: #00ff00;
+        }
+        /* 后代选择器 中间必须的有一个空格 */
+        div h1{
+            color:#00ff00;
+        }
+        /* 也是一个后代选择器 但是这个选择的范围会更小 更准确一些 */
+        #div1 h1{
+            color:#0000ff;
+        }
+        /* 类选择器 */
+        .bg-red{
+            /* background 是背景的意思 */
+            background:#ff0000;
+        }
+        .fs-36{
+            font-size: 36px;
+        }
+        .bg-blue{
+            /* bg#00f 这个快捷键再按回车直接出来以下内容 00f 就代表了 0000ff */
+            background: #0000ff;
         }
     </style>
 </head>
 <body>
-    <p>这是一个段落</p>
+    <!-- 给p标签加了id 它就唯一了 可以和其他的 p 分别出来 -->
+    <p id="p1">这是第一个段落</p>
+    <p>这是第二个段落</p>
+    <h1>这是一个标题</h1>
+    <div id="div1">
+        <h1>这是另一个标题</h1>
+    </div>
+    <div>
+        <h1>这是第三个标题</h1>
+    </div>
+
+    <!-- ul#ul1这个快捷键 按回车就相当于创建出id=ul1  ul元素 -->
+    <!-- 以下注释掉的就是生成的内容 -->
+    <!-- <ul id="ul1"></ul> -->
+
+    <!-- ul#ul1>li{item $}*3这个快捷键按回车 会生成以下内容 -->
+    <ul id="ul1">
+        <li>item 1</li>
+        <!-- 把这个li加了类别 就可以用类选择器进行操作 -->
+        <li class="bg-red fs-36 bg-blue">item 2</li>
+        <li class="bg-red fs-36">item 3</li>
+    </ul>
+
 </body>
 </html>
