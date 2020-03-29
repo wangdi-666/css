@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css样式</title>
+    <style>
+        #div1{
+            /* 宽 */
+            width: 800px;
+            /* 高 */
+            height: 500px;
+            /* 背景图片 url函数 （）内为指定图片路径 */
+            /* background-image:url(base-red.png); */
+            /* 背景重复 本条语句不让它重复 默认情况下是repeat的*/
+            /* background-repeat: no-repeat; */
+            /* 背景定位 */
+            /* background-position: 50% 50%; */
+
+            /* 当把上面语句都注释掉，下面这一条语句就起了作用 */
+            /* 这是background简写 也推荐这么写 内部的属性顺序没有要求 随意顺序*/
+            background: #00f url(base-red.png) no-repeat 50% 50%;
+            
+        }
+        #div2{
+            width: 300px;
+            height: 200px;
+            background:#00ff00;
+            color:#ff0000;
+            /* 文本水平对齐方式 其中有 left center right */
+            text-align: center;
+            /* 行高 行和行之间的高度*/
+            line-height: 200px;
+            /* 文本修饰 underline为下划线，over为上划线 
+            line-through为贯穿线（也就是删除线） none表示没有线*/
+            text-decoration: underline;
+        }
+        a{
+            text-decoration: none;
+        }
+        p{
+            width: 200px;
+            height: 100px;
+            background:#cccccc;
+            /* 首行缩进 */
+            text-indent:20px ;
+        }
+        #div3{
+            font-size: 48px;
+            /* 斜体 常用的就是斜体 */
+            font-style: italic;
+            /* bold 为加粗 默认为 normal*/
+            font-weight: bold;
+        }
+        #div4{
+            width: 200px;
+            height: 100px;
+            background:#cccccc;
+            /* 加一个1像素的（边框的宽度） 实心的 红色的 边框 */
+            border: 1px solid #ff0000;
+            /* 加一个10像素的（边框的宽度） 点状的 红色的 边框 */
+            border: 10px dotted #ff0000;
+            /* 加一个10像素的（边框的宽度） 虚线的 红色的 边框 */
+            border: 10px dashed #ff0000;
+            /* 上诉为合着的写法，简写 */
+
+            /* 下面介绍下分着写 */
+            border-width: 10px;
+            border-style: dashed;
+            border-color: #0000ff;
+
+            /* 只希望左边框有样式  同样又为right 上为top 下为bottom*/
+            border-left:10px dashed #ff0000;
+        }
+        #ul1{
+            /* 黑点*/
+            list-style: disk;
+            /* 列表前面的点就没了 */
+            list-style: none;
+            /* 空心圈 */
+            list-style: circle;
+            /* 小写罗马数字 */
+            list-style: lower-roman;
+            /* 大写罗马数字 */
+            list-style: upper-roman;
+            /* 数字 */
+            list-style: decimal;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1"></div>
+    <div id="div2">
+        这是一段文本
+    </div>
+
+    <a href="">这是一个链接</a>
+
+    <p>
+        这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落这是一个段落
+    </p>
+    <div id="div3">
+        这是一段文本
+    </div>
+    <div id="div4">
+        这是一段文本
+    </div>
+
+    <ul id="ul1">
+        <li>itme 1</li>
+        <li>itme 2</li>
+        <li>itme 3</li>
+    </ul>
+</body>
+</html>

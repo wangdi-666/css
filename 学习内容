@@ -98,6 +98,54 @@ class选择器 | 属性选择器 | 伪类选择器       10
 前面所说的覆盖问题，在这个权重值看来，先遵循权重值。
 所以说主要看权重值。
 
+五，
+
+背景定位 background-position:
+存在两个方向，水平方向和数值方向 
+水平方向控制的属性有 left(左) center(中) right(右)
+垂直方向控制的属性有 top(上) center(中) bottom(向下)
+如果用如上单词 水平和垂直方向谁先声明都可以（根据个人习惯自己声明）
+例如：
+background-position: left center;
+background-position: center left;
+但是如果用数值水平和垂直就不是这样了
+相当于平面直角坐标系 x 和 y 轴，默认左上角是原点
+水平向右是正数 ，水平向左是负数
+垂直向下是正数 ，垂直向上是负数
+例如：
+background-position: 0px 0px ;相当于background-position: left top;
+background-position: 20px 30px ;相当于水平向右移动20，垂直向下移动30
+所以数值的声明顺序为，先水平后垂直
+background-position: 50% 50%;相当于
+background-position: center center ; 可以把图片放到div块状区域之间
+
+行高
+line-height
+当只有单行文字时，可以通过行高间接完成文字垂直居中
+例如：可以把高度的值和行高写成一样
+height: 200px;
+line-height: 200px;
+这个就可以完成单行文字的垂直居中，但是多行文字就不管用了
+
+css字体属性：
+属性                 描述
+font                 简写属性。作用是把所有针对字体的属性设置在一个声明中（和background一样）
+font-family          设置字体系类，例如宋体啥的
+font-size            设置字体尺寸
+font-style           改变字体风格
+font-weight          设置字体粗细
+
+css边框属性：
+
+css列表样式：
+
+
+
+
+
+
+
+
 
 
 
