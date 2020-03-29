@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* 因为不知道网页里面谁会默认的存在内外边距 ，
+    所以建议每次写代码都利用通配符 * 把所有内外边距
+    都清零 需要用的时候在加  */
+    /* *{
+       padding: 0;
+        margin: 0;
+    } */
+    #div1{
+        width: 200px;
+        height: 100px;
+        background: #cccccc;
+    }
+    #ul1{
+        list-style: none;
+        /* 在标准浏览器中，用这个可以清除列表左边的边距 */
+        padding-left: 0 ;
+        /* 在ie6 浏览器中，用这个可以清除列表左边的边距 */
+        margin-left: 0 ;
+    }
+</style>
+<body>
+    <div id="div1">这是div1</div>
+
+    <ul id="ul1">
+        <li>item 1</li>
+        <li>item 2</li>
+        <li>item 3</li>
+    </ul>
+</body>
+</html>

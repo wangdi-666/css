@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css盒模型</title>
+    <style>
+        #div1{
+            background: #cccccc;
+            /* 边框 */
+            border: 5px solid #000;
+            /* 内边距 */
+            padding: 10px;
+        }
+        #div2{
+            background: #cccccc;
+            /* 外边距 */
+            margin: 20px;
+        }
+        #div3{
+            /* 这里的宽和高只是内容的宽和高，并不包含边框的 */
+            width: 300px;
+            height: 200px;
+            background: #cccccc;
+            border: 5px solid #000;
+            padding: 5px;
+        }
+        #div4{
+            width: 200px;
+            height: 100px;
+            background: #cccccc;
+            /* margin: 50px; */
+
+            /* 每个框都有四个方向 left right top bottom */
+            /* 只单独加左面一个方向 */
+            margin-left: 50px;
+            /* 只单独加上面一个方向 */
+            margin-top: 50px;
+            border: 10px solid #000;
+            padding: 20px;
+            /* 正常的默认情况 */
+            box-sizing: content-box;
+            /* 相当于ie6 里面的怪异情况 */
+            box-sizing: border-box;
+        }
+        #div5{
+            width: 200px;
+            height: 100px;
+            background: #cccccc;
+            margin: 50px 70px 90px 110px;
+            border: 10px solid #000;
+            padding: 20px;
+            box-sizing: content-box;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">这是div1</div>
+    <div id="div2">这是div2</div>
+    <div id="div3">这是div3</div>
+    <div id="div4">这是div4</div>
+    <div id="div5">这是div5</div>
+</body>
+</html>
