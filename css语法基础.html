@@ -46,6 +46,20 @@
             /* bg#00f 这个快捷键再按回车直接出来以下内容 00f 就代表了 0000ff */
             background: #0000ff;
         }
+        /* 当多个权重值的共同作用的时候 采用权重值相加 大的起作用 */
+        /* 例如：下面两个都有!important 但是还是id选择器权重值更高 */
+        #p2{
+            color:#ff0000;
+            background: #0000ff !important;
+        }
+        .bg-green{
+            /* 加上!important 权重值就最大 */
+            background: #00ff00 !important;
+        }
+        /* 通配符 选中所有的标签 对所有的标签都起作用 */
+        *{
+            font-style: italic;
+        }
     </style>
 </head>
 <body>
@@ -71,6 +85,8 @@
         <li class="bg-red fs-36 bg-blue">item 2</li>
         <li class="bg-red fs-36">item 3</li>
     </ul>
+
+    <p id="p2" class="bg-green" style="background:yellow;">演示权重值的例子</p>
 
 </body>
 </html>
