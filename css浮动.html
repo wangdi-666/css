@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css浮动</title>
+    <style>
+        div{
+            width: 200px;
+            height: 100px;
+            /* display: inline-block; */
+            /* float: left; */
+        }
+        #a{
+            background: #ff0000;
+            /* 浮动 */
+            float: left;
+        }
+        #b{
+            width: 300px;
+            background: #00ff00;
+            /* 清理左浮动 因为上一个元素的浮动覆盖了b 所以用这个清理 避免覆盖 */
+            /* clear: left; */
+            /* 因为有的时候并不知道上一个元素是左浮动还是右浮动
+            所以直接用 both */
+            clear: both;
+        }
+        #c{
+            background: #0000ff;
+        }
+    </style>
+</head>
+<body>
+    <!-- 在语句之间因为有回车，所以在把块级元素利用display行向排列的时候
+    浏览器会在元素块之间产生一个小的缝隙，如果想解决这个问题
+    就可以用css 浮动来解决 -->
+    <div id="a"></div>
+    <div id="b"></div>
+    <div id="c"></div>
+</body>
+</html>
