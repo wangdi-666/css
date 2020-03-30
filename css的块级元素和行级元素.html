@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css的块级元素和行级元素</title>
+</head>
+<style>
+    div,h1,p{
+        /* inline 直接把垂直排列变成水平排列
+           none 直接不显示在屏幕上 在屏幕上就消失了 */
+        /* display: inline; */
+        background: #ff0000;
+        width: 200px;
+        height: 100px;
+        /* 水平排列且设置宽和高 */
+        display: inline-block;
+    }
+    a,span{
+        /* block 把水平变成垂直 */
+        /* display: block; */
+        background: #00ff00;
+        width: 200px;
+        height: 100px;
+    }
+</style>
+<body>
+    <!-- 这些都是块级元素 默认垂直排列 -->
+    <div id="div1">这是div</div>
+    <h1>这是h1</h1>
+    <p>这是p</p>
+
+    <!-- 行级元素 默认水平排列 -->
+    <a href="">这是链接</a>
+    <span>这是span</span>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css外边距合并</title>
+    <style>
+        div{
+            width: 300px;
+            height: 200px;
+            background: #cccccc;
+        }
+        /* 当这两个div连接到一起的时候，同时加外边距
+        他们会合并到一起 只显示50px  */
+        #div1{
+            margin-bottom: 50px;
+        }
+        #div2{
+            margin-top: 30px;
+        }
+        /* 可以用 overflow: hidden; 来解决外边距合并的问题*/
+        #div3{
+            width: 500px;
+            height: 400px;
+            background:#ff0000;
+            /* border: 1px solid #000; */
+            overflow: hidden;
+        }
+        /* 当仅仅给div4加外边距的时候，div3也同时出现了外边距
+        所以当他们产生了父子关系的时候 ，就会产生外边距合并 
+        如果在div3中再加入边框就不会产生这个问题 如上
+        但是这个方法不能用 ，因为没必要多加上一个边框
+        所以把它注释掉*/
+        #div4{
+            margin-top: 50px;
+        }
+        p{
+            width: 200px;
+            height: 200px;
+            background: #cccccc;
+            /* 同样overflow 也可以把多余的文字隐藏起来 */
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">这是div1</div>
+    <div id="div2">这是div2</div>
+
+    <div id="div3">
+        <div id="div4"></div>
+    </div>
+
+    <p>这是文字这是文字这是文字这是文字这是文字这是文字这是文字这是文字这是文字这是文字这是文字这是文字这是文字这是文字这是文字这是文字这是文字这是文字这是文字这是文字这是文字这是文字这是文字这是文字这是文字这是文字这是文字这是文字这是文字这是文字这是文字这是文字</p>
+
+</body>
+</html>
